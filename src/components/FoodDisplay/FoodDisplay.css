@@ -1,0 +1,48 @@
+/* Arrange food items in a grid layout */
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    gap: 15px;
+    padding: 10px;
+    justify-content: center;
+}
+
+/* Individual food item */
+.food-item {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+/* Ensure food images do not overlap */
+.image-container {
+    width: 100%;
+    position: relative;
+}
+
+/* Food item image */
+.food-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .food-display-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .food-display-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on smaller devices */
+    }
+}
